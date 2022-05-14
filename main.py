@@ -63,7 +63,7 @@ plt.title('Separation of Investments', fontsize=22)
 st.pyplot(fig)
 
 
-
+st.title("Region with the lowest GRP")
 loc = 'Gorno-Altay'
 location = geocode(loc, provider="nominatim" , user_agent = 'my_request')
 point = location.geometry.iloc[0] 
