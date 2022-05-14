@@ -22,7 +22,7 @@ sns.set_style("white")
 
 fig, ax = plt.subplots(figsize=(50,40), dpi= 80)    
 sns.stripplot(df.GRP2015, df.I2015, size=20, ax=ax)
-plt.title('Counts Plot', fontsize=22)
+plt.title('Dependence of GDP on investment', fontsize=22)
 st.pyplot(fig)
 
 
