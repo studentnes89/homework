@@ -5,6 +5,9 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 from mpl_toolkits.mplot3d import Axes3D
+import folium
+from streamlit_folium import st_folium
+import json
 df= pd.read_csv("data.csv")
 
 df_new = df[["Region", "GRP2014", "GRP2015", "GRP2016", "I2014", "I2015", "I2016", "I_prod2014", "I_prod2015", "I_prod2016", "I_inf2014", "I_inf2015", "I_inf2016"]]
@@ -57,4 +60,20 @@ ax.scatter(x, y, z)
 plt.title('Separation of Investments', fontsize=22)
 st.pyplot(fig)
 
-
+geo = f"countries.geojson"
+m = folium.Map(location = [0,0], zoom_start = 3)
+folium.Choropleth(
+        geo_data=geo,
+        name="choropleth",
+        data=df_1_clean,
+        columns=["Male Height in Cm", "Country Name"],
+        key_on="ADMIN",
+        fill_color="YlGn",
+        fill_opacity=0.7,
+        nan_fill_opacity = 0,
+        line_opacity=0.2,
+        legend_name="Country Name",
+    ).add_to(m)
+folium.LayerControl().add_to(m)
+st_data = st_folium(m, width = 725)
+st_data
