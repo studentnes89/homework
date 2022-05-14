@@ -23,10 +23,10 @@ df_selection
 
 fig, ax = plt.subplots(figsize=(30,20), dpi= 80)    
 sns.stripplot(df.GRP2015, df.I2015, size=20, ax=ax)
-plt.title('Dependence of GDP on Investment', fontsize=40)
+plt.title('Dependence of GRP on Investment', fontsize=40)
 plt.xticks(fontsize=5)
 plt.yticks(fontsize=30)
-ax.set_xlabel("GDP2015", fontsize=30)
+ax.set_xlabel("GRP2015", fontsize=30)
 ax.set_ylabel("Investments2015", fontsize=30)
 st.pyplot(fig)
 
@@ -43,7 +43,7 @@ df_new = df[["GRP2014", "I2014", "I_prod2014", "I_inf2014"]]
 
 fig = plt.figure(figsize=(50, 20), dpi= 2000)
 sns.heatmap(df_new.corr(), xticklabels=df_new.corr().columns, yticklabels=df_new.corr().columns, cmap='RdYlGn', center=0, annot=True)
-plt.title('Correlogram of GDP2014', fontsize=60)
+plt.title('Correlogram of GRP2014', fontsize=60)
 plt.xticks(fontsize=50)
 plt.yticks(fontsize=50)
 st.pyplot(fig)
@@ -51,7 +51,7 @@ st.pyplot(fig)
 df2=df.sort_values(by=["GRP2014"])[::10]
 fig, ax = plt.subplots(figsize=(16,10))
 ax = sns.barplot(x="Region", y="GRP2014", data=df2)
-plt.title('Distribution of regions by GDP level from the smallest to the largest', fontsize=22)
+plt.title('Distribution of regions by GRP level from the smallest to the largest', fontsize=22)
 st.pyplot(fig)
 
 fig = plt.figure()
