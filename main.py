@@ -29,7 +29,7 @@ st.pyplot(fig)
 
 fig = plt.figure(figsize=(50, 20), dpi= 80)
 sns.heatmap(df.corr(), xticklabels=df.corr().columns, yticklabels=df.corr().columns, cmap='RdYlGn', center=0, annot=True)
-plt.title('Correlogram of GDP', fontsize=22)
+plt.title('Correlogram of GDP', fontsize=40)
 plt.xticks(fontsize=15)
 plt.yticks(fontsize=15)
 st.pyplot(fig)
