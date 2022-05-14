@@ -8,7 +8,7 @@ from mpl_toolkits.mplot3d import Axes3D
 import folium
 from streamlit_folium import st_folium
 import json
-geopandas.tools import geocode
+from geopandas.tools import geocode
 
 df= pd.read_csv("data.csv")
 
