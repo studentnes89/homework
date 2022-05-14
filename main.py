@@ -74,7 +74,11 @@ point = location.geometry.iloc[0]
 
 data= pd.DataFrame({"longitude":[point.x], "latitude":[point.y]})
 
-mapit = folium.Map( location=[0, 0], zoom_start=1 ) for lat , lon in zip(data.latitude , data.longitude): folium.Marker( location=[ lat,lon ], fill_color='#43d9de', radius=8 ).add_to( mapit ) mapit
+mapit = folium.Map( location=[0, 0], zoom_start=1 ) 
+for lat , lon in zip(data.latitude , data.longitude): 
+        folium.Marker( location=[ lat,lon ], fill_color='#43d9de', radius=8 ).add_to( mapit ) 
+st_data = st_folium(mapit, width = 725)
+st_data
  
                     
                     
