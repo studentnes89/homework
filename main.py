@@ -68,7 +68,7 @@ m = folium.Map(location=[63.391522, 96.328125], zoom_start=3)
 st_data = st_folium(m, width = 725)
 st_data
 
-loc = 'Moscow'
+loc = 'Gorno-Altay'
 location = geocode(loc, provider="nominatim" , user_agent = 'my_request')
 point = location.geometry.iloc[0] 
 
