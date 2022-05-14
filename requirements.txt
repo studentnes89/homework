@@ -3,4 +3,4 @@ matplotlib==3.5.2
 seaborn==0.11.2
 folium
 streamlit-folium
-
+mpl_toolkits
