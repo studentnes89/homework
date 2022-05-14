@@ -7,12 +7,16 @@ import seaborn as sns
 from mpl_toolkits.mplot3d import Axes3D
 df= pd.read_csv("data.csv")
 
-
+df_new = df[["GRP2014", "GRP2015", "GRP2016 "I2014", "I2015", "I2016" "I_prod2014", "I_prod2015", "I_prod2016" "I_inf2014", "I_inf2015", "I_inf2016", "A_p2014", "A_p2015", "A_P2016"]]
 Region = st.selectbox(
-        "Region", df["Region"].value_counts().index
+        "Region", df_new["Region"].value_counts().index
     )
-df_selection = df[lambda x: x["Region"] == Region]
+df_selection = df_new[lambda x: x["Region"] == Region]
 df_selection
+
+fig, ax=plt.subplot()
+             sns.lineplot(x="
+ 
 
 
 fig, ax = plt.subplots(figsize=(50,40), dpi= 80)    
