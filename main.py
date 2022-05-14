@@ -32,7 +32,7 @@ st.pyplot(fig)
 df_new = df[["GRP2014", "I2014", "I_prod2014", "I_inf2014"]]
 
 
-st.markdown("Let`s see closer. It`s an example of correlation beetween indicators in one year")
+st.markdown("Lets see closer. It`s an example of correlation beetween indicators in one year")
 
 fig = plt.figure(figsize=(50, 20), dpi= 20)
 sns.heatmap(df_new.corr(), xticklabels=df_new.corr().columns, yticklabels=df_new.corr().columns, cmap='RdYlGn', center=0, annot=True)
