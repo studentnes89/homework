@@ -42,3 +42,8 @@ plt.title('Correlogram of GDP2014', fontsize=22)
 plt.xticks(fontsize=9)
 plt.yticks(fontsize=9)
 st.pyplot(fig)
+
+df2=df.sort_values(by=["GRP2014"])[::10]
+fig, ax = plt.subplots(figsize=(16,10))
+ax = sns.barplot(x="Region", y="GRP2014", data=df2)
+st.pyplot(fig)
