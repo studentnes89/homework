@@ -7,7 +7,7 @@ import seaborn as sns
 from mpl_toolkits.mplot3d import Axes3D
 df= pd.read_csv("data.csv")
 
-df_new = df[["GRP2014", "GRP2015", "GRP2016", "I2014", "I2015", "I2016", "I_prod2014", "I_prod2015", "I_prod2016", "I_inf2014", "I_inf2015", "I_inf2016"]]
+df_new = df[["Region", "GRP2014", "GRP2015", "GRP2016", "I2014", "I2015", "I2016", "I_prod2014", "I_prod2015", "I_prod2016", "I_inf2014", "I_inf2015", "I_inf2016"]]
 Region = st.selectbox(
         "Region", df_new["Region"].value_counts().index
     )
