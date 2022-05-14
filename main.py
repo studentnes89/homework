@@ -58,5 +58,6 @@ ax.set_xlabel("Производственные")
 ax.set_ylabel("Инфраструктурные")
 ax.set_zlabel("Инвестиции")
 ax.scatter(x, y, z)
+plt.title('Separation of Investments', fontsize=22)
 st.pyplot(fig)
 
