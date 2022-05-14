@@ -61,22 +61,7 @@ plt.title('Separation of Investments', fontsize=22)
 st.pyplot(fig)
 
 m = folium.Map(location=[63.391522, 96.328125], zoom_start=3)
-rel_ = folium.Choropleth(
-       geo_data = "regions.geojson", 
-       name = 'Отношение числа филиалов с ЕБС ко всем',
-       data = df,
-       columns=['Region', 'GRP2014'], 
-       key_on='name',
-       bins = 5,
-       fill_color='BuGn',
-       nan_fill_color='darkblue',
-       nan_fill_opacity=0.5,
-       fill_opacity=0.7,
-       line_opacity=0.2,
-       legend_name= 'Отношение числа филиалов с ЕБС ко всем',
-       highlight = True,
-       show = False
-).add_to(m)
-folium.LayerControl().add_to(m)
+
+
 st_data = st_folium(m, width = 725)
 st_data
