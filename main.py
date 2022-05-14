@@ -62,7 +62,7 @@ st.pyplot(fig)
 
 m = folium.Map(location=[63.391522, 96.328125], zoom_start=3)
 rel_ = folium.Choropleth(
-       geo_data = path_to_ GeoJSON_file, 
+       geo_data = "Regions.geojson", 
        name = 'Отношение числа филиалов с ЕБС ко всем',
        data = df,
        columns=['Region', 'GRP2014'], 
