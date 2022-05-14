@@ -15,7 +15,7 @@ df_selection = df_new[lambda x: x["Region"] == Region]
 df_selection
 
 fig, ax=plt.subplots(figsize=(50, 40))
-sns.lineplot(x=["2014", "2015", "2016"], y=["GRP2014", "GRP2015", "GRP2016"], data=df_selection)
+sns.lineplot(x=["GRP2014", "GRP2015", "GRP2016"],  data=df_selection)
 st.pyplot(fig)
 
 
