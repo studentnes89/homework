@@ -31,4 +31,4 @@ sns.heatmap(df.corr(), xticklabels=df.corr().columns, yticklabels=df.corr().colu
 plt.title('Correlogram of GDP', fontsize=22)
 plt.xticks(fontsize=12)
 plt.yticks(fontsize=12)
-st.pyplot(figure)
+plt.gcf().savefig("correlation.png")
