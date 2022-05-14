@@ -27,6 +27,7 @@ plt.title('Dependence of GDP on Investment', fontsize=40)
 plt.xticks(fontsize=5)
 plt.yticks(fontsize=30)
 ax.set_xlabel("GDP2015", fontsize=30)
+ax.set_ylabel("Investments2015", fontsize=30)
 st.pyplot(fig)
 
 
