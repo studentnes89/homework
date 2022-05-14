@@ -76,4 +76,7 @@ rel_ = folium.Choropleth(
        legend_name= 'Отношение числа филиалов с ЕБС ко всем',
        highlight = True,
        show = False
-)
+).add_to(m)
+folium.LayerControl().add_to(m)
+st_data = st_folium(m, width = 725)
+st_data
