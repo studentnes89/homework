@@ -21,7 +21,7 @@ df_selection
 
 
 
-fig, ax = plt.subplots(figsize=(30,20), dpi= 200)    
+fig, ax = plt.subplots(figsize=(30,20), dpi= 80)    
 sns.stripplot(df.GRP2015, df.I2015, size=90, ax=ax)
 plt.title('Dependence of GDP on Investment', fontsize=40)
 st.pyplot(fig)
