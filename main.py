@@ -60,20 +60,4 @@ ax.scatter(x, y, z)
 plt.title('Separation of Investments', fontsize=22)
 st.pyplot(fig)
 
-geo = f"geo.json"
-m = folium.Map(location = [0,0], zoom_start = 3)
-folium.Choropleth(
-        geo_data=geo,
-        name="choropleth",
-        data=df_1_clean,
-        columns=["GRP2014", "Region"],
-        key_on="ADMIN",
-        fill_color="YlGn",
-        fill_opacity=0.7,
-        nan_fill_opacity = 0,
-        line_opacity=0.2,
-        legend_name="Region",
-    ).add_to(m)
-folium.LayerControl().add_to(m)
-st_data = st_folium(m, width = 725)
-st_dat
+m = folium.Map(location=[63.391522, 96.328125], zoom_start=3)
