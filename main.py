@@ -74,7 +74,7 @@ st.pyplot(fig)
 ###END FROM
 
 ###Построение карты частично основывалось на примере с данного сайта: https://pythonim.ru/libraries/geopandas-v-python
-st.markdown("Where is the Regions with the smallest and the biggest GRP are located?")
+st.markdown("Where are the Regions with the smallest and the biggest GRP are located?")
 st.title("Region with the smallest GRP")
 loc = 'Gorno-Altay'
 location = geocode(loc, provider="nominatim" , user_agent = 'my_request')
