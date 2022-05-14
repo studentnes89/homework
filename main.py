@@ -8,6 +8,8 @@ from mpl_toolkits.mplot3d import Axes3D
 import folium
 from streamlit_folium import st_folium
 import json
+geopandas.tools import geocode
+
 df= pd.read_csv("data.csv")
 
 df_new = df[["Region", "GRP2014", "GRP2015", "GRP2016", "I2014", "I2015", "I2016", "I_prod2014", "I_prod2015", "I_prod2016", "I_inf2014", "I_inf2015", "I_inf2016"]]
@@ -65,3 +67,14 @@ m = folium.Map(location=[63.391522, 96.328125], zoom_start=3)
 
 st_data = st_folium(m, width = 725)
 st_data
+
+loc = 'Moscow'
+location = geocode(loc, provider="nominatim" , user_agent = 'my_request')
+point = location.geometry.iloc[0] 
+
+data= pd.DataFrame({"longitude":['.format(point.x)], "latitude":['.format(point.y)])
+mapit = folium.Map( location=[0, 0], zoom_start=1 ) for lat , lon in zip(df.latitude , df.longitude): folium.Marker( location=[ lat,lon ], fill_color='#43d9de', radius=8 ).add_to( mapit ) mapit
+ 
+                    
+                    
+                    ###https://pythonim.ru/libraries/geopandas-v-python
