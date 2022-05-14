@@ -38,8 +38,8 @@ df_new = df[["GRP2014", "I2014", "I_prod2014", "I_inf2014"]]
 fig = plt.figure(figsize=(50, 20), dpi= 80)
 sns.heatmap(df_new.corr(), xticklabels=df_new.corr().columns, yticklabels=df_new.corr().columns, cmap='RdYlGn', center=0, annot=True)
 plt.title('Correlogram of GDP2014', fontsize=40)
-plt.xticks(fontsize=9)
-plt.yticks(fontsize=9)
+plt.xticks(fontsize=20)
+plt.yticks(fontsize=20)
 st.pyplot(fig)
 
 df2=df.sort_values(by=["GRP2014"])[::10]
