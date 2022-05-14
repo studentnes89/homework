@@ -51,12 +51,12 @@ st.pyplot(fig)
 
 fig = plt.figure()
 ax = fig.add_subplot(111, projection = '3d')
-x = df['I2014']
+x = df['I_prod2014']
 y = df['I_inf2014']
-z = df['I_prod2014']
-ax.set_xlabel("Инвестиции")
+z = df['I2014']
+ax.set_xlabel("Производственные")
 ax.set_ylabel("Инфраструктурные")
-ax.set_zlabel("Производственные")
+ax.set_zlabel("Инвестиции")
 ax.scatter(x, y, z)
 st.pyplot(fig)
 
