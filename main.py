@@ -22,13 +22,13 @@ sns.set_style("white")
 
 fig, ax = plt.subplots(figsize=(50,40), dpi= 80)    
 sns.stripplot(df.GRP2015, df.I2015, size=20, ax=ax)
-plt.title('Dependence of GDP on investment', fontsize=22)
+plt.title('Dependence of GDP on Investment', fontsize=22)
 st.pyplot(fig)
 
 
 fig = plt.figure(figsize=(50, 20), dpi= 80)
 sns.heatmap(df.corr(), xticklabels=df.corr().columns, yticklabels=df.corr().columns, cmap='RdYlGn', center=0, annot=True)
 plt.title('Correlogram of GDP', fontsize=22)
-plt.xticks(fontsize=12)
-plt.yticks(fontsize=12)
+plt.xticks(fontsize=15)
+plt.yticks(fontsize=15)
 st.pyplot(fig)
