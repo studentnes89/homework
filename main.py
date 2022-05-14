@@ -49,14 +49,4 @@ fig, ax = plt.subplots(figsize=(16,10))
 ax = sns.barplot(x="Region", y="GRP2014", data=df2)
 st.pyplot(fig)
 
-fig = plt.figure()
-ax = fig.add_subplot(111, projection = '3d')
-x = df['I2014']
-y = df['I_inf2014']
-z = df['I_prod2014']
-ax.set_xlabel("Инвестиции")
-ax.set_ylabel("Инфраструктурные")
-ax.set_zlabel("Производственные")
-ax.scatter(x, y, z)
-st.pyplot(fig)
 
