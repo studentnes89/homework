@@ -47,6 +47,7 @@ st.pyplot(fig)
 df2=df.sort_values(by=["GRP2014"])[::10]
 fig, ax = plt.subplots(figsize=(16,10))
 ax = sns.barplot(x="Region", y="GRP2014", data=df2)
+plt.title('Distribution of regions by GDP level from the smallest to the largest', fontsize=22)
 st.pyplot(fig)
 
 fig = plt.figure()
@@ -54,9 +55,9 @@ ax = fig.add_subplot(111, projection = '3d')
 x = df['I_prod2014']
 y = df['I_inf2014']
 z = df['I2014']
-ax.set_xlabel("Производственные")
-ax.set_ylabel("Инфраструктурные")
-ax.set_zlabel("Инвестиции")
+ax.set_xlabel("Production I")
+ax.set_ylabel("Infrastructure I")
+ax.set_zlabel("All I")
 ax.scatter(x, y, z)
 plt.title('Separation of Investments', fontsize=22)
 st.pyplot(fig)
