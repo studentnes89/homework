@@ -52,7 +52,7 @@ plt.title('Separation of Investments', fontsize=22)
 st.pyplot(fig)
 
 Region = st.selectbox(
-        "Region", df["Region"].value_counts().iloc[:10].index
+        "Region", df["Region"].value_counts().index
     )
 df_selection = df[lambda x: x["Region"] == Region]
 df_selection
