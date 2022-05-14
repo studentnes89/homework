@@ -69,11 +69,11 @@ ax.set_xlabel("Production I")
 ax.set_ylabel("Infrastructure I")
 ax.set_zlabel("Investment (all)")
 ax.scatter(x, y, z)
-plt.title('Separation of Investments', fontsize=20)
+plt.title('Separation of Investments', fontsize=10)
 st.pyplot(fig)
 ###END FROM
 
-###Построение карты частично основывалось на примере с данного сайта https://pythonim.ru/libraries/geopandas-v-python
+###Построение карты частично основывалось на примере с данного сайта: https://pythonim.ru/libraries/geopandas-v-python
 st.markdown("Where is the Regions with the smallest and the biggest GRP are located?")
 st.title("Region with the smallest GRP")
 loc = 'Gorno-Altay'
