@@ -6,8 +6,13 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 from mpl_toolkits.mplot3d import Axes3D
 df= pd.read_csv("data.csv")
-df
 
+
+Region = st.selectbox(
+        "Region", df["Region"].value_counts().index
+    )
+df_selection = df[lambda x: x["Region"] == Region]
+df_selection
 
 
 fig, ax = plt.subplots(figsize=(50,40), dpi= 80)    
@@ -24,7 +29,7 @@ plt.yticks(fontsize=15)
 st.pyplot(fig)
 
 df_new = df[["GRP2014", "I2014", "I_prod2014", "I_inf2014"]]
-df_new
+
 
 fig = plt.figure(figsize=(50, 20), dpi= 80)
 sns.heatmap(df_new.corr(), xticklabels=df_new.corr().columns, yticklabels=df_new.corr().columns, cmap='RdYlGn', center=0, annot=True)
@@ -51,8 +56,4 @@ ax.scatter(x, y, z)
 plt.title('Separation of Investments', fontsize=22)
 st.pyplot(fig)
 
-Region = st.selectbox(
-        "Region", df["Region"].value_counts().index
-    )
-df_selection = df[lambda x: x["Region"] == Region]
-df_selection
+
