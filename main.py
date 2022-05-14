@@ -64,7 +64,7 @@ st.pyplot(fig)
 
 
 
-loc = 'Argentina'
+loc = 'Gorno-Altay'
 location = geocode(loc, provider="nominatim" , user_agent = 'my_request')
 point = location.geometry.iloc[0] 
 
