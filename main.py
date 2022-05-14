@@ -14,7 +14,9 @@ Region = st.selectbox(
 df_selection = df_new[lambda x: x["Region"] == Region]
 df_selection
 
-
+fig, ax=plt.subplot()
+sns.lineplot(x=["2014", "2015", "2016"], y=["GRP2014", "GRP2015", "GRP2016"], data=df_selection)
+st.pyplot(fig)
 
 
 fig, ax = plt.subplots(figsize=(50,40), dpi= 80)    
