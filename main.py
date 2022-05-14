@@ -26,7 +26,7 @@ plt.title('Counts Plot', fontsize=22)
 st.pyplot(fig)
 
 
-fig, ax = plt.figure(figsize=(50, 20), dpi= 80)
+fig = plt.figure(figsize=(50, 20), dpi= 80)
 sns.heatmap(df.corr(), xticklabels=df.corr().columns, yticklabels=df.corr().columns, cmap='RdYlGn', center=0, annot=True)
 plt.title('Correlogram of GDP', fontsize=22)
 plt.xticks(fontsize=12)
