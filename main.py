@@ -11,7 +11,7 @@ import json
 from geopandas.tools import geocode
 
 df= pd.read_csv("data.csv")
-
+st.markdown("Please, choose the Region of Russian Federation and get information about Gross Domestic Product (GRP) and Infrastructures")
 df_new = df[["Region", "GRP2014", "GRP2015", "GRP2016", "I2014", "I2015", "I2016", "I_prod2014", "I_prod2015", "I_prod2016", "I_inf2014", "I_inf2015", "I_inf2016"]]
 Region = st.selectbox(
         "Region", df_new["Region"].value_counts().index
