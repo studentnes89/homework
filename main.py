@@ -5,7 +5,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 import matplotlib as mpl
-from bs4 import BeautifulSoup
+
 import requests
 from pywaffle import Waffle
 import folium
@@ -98,22 +98,7 @@ with st.echo(code_location='below'):
     st.markdown(
         "P.S. (Данные описания и картинки города я получаю с помощью веб-скреппинга, однако не у всех ресторанов на сате Мишлен есть описание и картинка с достопримечательностями города. Попробуйте выбрать Австрию, Тайпей, Грецию чтобы насладиться также описанием и фотографиями доспримечательностей)")
 
-    cit = df_selection['city'][0:1].values[0]
-    cit = wikipedia.search(cit)[0]
-    st.write(cit)
-    city = cit.replace(" ", "_")
-    ssilka = 'https://en.wikipedia.org/wiki/' + city
-    r = requests.get(ssilka)
-    t = BeautifulSoup(r.text, 'html.parser')
-    for link in t("img"):
-        a = link.get('src')
-    #if (a is None) == False:
-        #itog = a
-        #ind = 1
-    #if ind == 1:
-        #break
-    url = "https:" + itog
-    st.image(url)
+    
     discrp = df_selection_2['description'][0:1].values[0]
     st.write("Описание ресторана")
     discrp
