@@ -111,7 +111,7 @@ with st.echo(code_location='below'):
         itog = a
         ind = 1
     if ind == 1:
-        break
+       break
     url = "https:" + itog
     st.image(url)
     discrp = df_selection_2['description'][0:1].values[0]
